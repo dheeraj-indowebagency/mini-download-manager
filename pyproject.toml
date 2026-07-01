@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "mini-download-manager"
+version = "1.0.0"
+description = "A desktop download manager with PyQt6, asyncio, and SQLite"
+requires-python = ">=3.12"
+dependencies = [
+    "PyQt6>=6.6.0",
+    "aiohttp>=3.9.0",
+]
+
+[project.scripts]
+download-manager = "download_manager.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
